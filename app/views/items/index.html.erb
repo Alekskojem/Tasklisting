@@ -1,5 +1,6 @@
 <%  if user_signed_in? %>
 <% @items.each do |item| %>
+
 <% if item.completed? %>
 
 <div class="row item">
@@ -54,3 +55,8 @@
 <% else %>
 		<%= render 'layouts/static_landing_page' %>
 <% end %>
+
+<h2><%= link_to item.title %></h1>
+<p><%= item.description %></p>
+<% end %>
+<%= link_to "New task", new_item_path %>
