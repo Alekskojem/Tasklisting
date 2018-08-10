@@ -17,13 +17,11 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
+  gem 'rspec-rails', '~> 3.7'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
  
  end
 
-group :production do
-	gem 'pg'
-end
 
 group :development do
   gem 'web-console', '>= 3.3.0'
@@ -32,10 +30,10 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-#group :production do
-#	gem 'pg'
-#	gem 'rails_12factor'
-#end
+group :production do
+	gem 'pg'
+	gem 'rails_12factor'
+end
 
 group :test do
  gem 'capybara', '>= 2.15', '< 4.0'
